@@ -1,4 +1,5 @@
 from table_extractor import TableExtractor
+from pdf_extractor import PDFPipeline
 
 extractor = TableExtractor("sample-tables.pdf")
 
@@ -14,8 +15,6 @@ for i, table in enumerate(tables, start=1):
 with open("tables.md", "w", encoding="utf-8") as f:
     f.write(output)
 print("saved to table")
-
-from pdf_extractor import PDFPipeline
 
 pipeline = PDFPipeline("sample-tables.pdf")
 
